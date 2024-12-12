@@ -1,9 +1,14 @@
-```
-mkdir build
-cd build
-```
+### Проверка сборки с покрытием на Linux
 
-версия Visual Studio может отличаться
+предварительно удалить папку `build`
+
 ```
-cmake .. -G "Visual Studio 16 2019"
+rm -rf build
+
+```
+в директории `test-repo` запустить скрипт `run.sh`
+
+```
+chmod +x run.sh
+sh run.sh
 ```
