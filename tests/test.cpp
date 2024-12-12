@@ -92,6 +92,26 @@ bool test_body_size3()
   return candle.body_size() == 1.0;
 }
 
+//tests 2.5
+bool test_is_red1()
+{
+  Candle candle{ 4.0, 5.0, 2.0, 3.0 };
+  return candle.is_red() == true;
+}
+
+bool test_is_red2()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 3.0 };
+  return candle.is_red() == false;
+}
+
+bool test_is_red3()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 5.0 };
+  return candle.is_red() == false;
+}
+
+
 void initTests()
 {
   tests.push_back(test_body_contains1);
@@ -106,6 +126,9 @@ void initTests()
   tests.push_back(test_body_size1);
   tests.push_back(test_body_size2);
   tests.push_back(test_body_size3);
+  tests.push_back(test_is_red1);
+  tests.push_back(test_is_red2);
+  tests.push_back(test_is_red3);
 
 
 }
