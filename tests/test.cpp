@@ -32,11 +32,41 @@ bool test_body_contains3()
   return candle.body_contains(price) == true;
 }
 
+//tests 2.2
+bool test_contains1()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 4.0 };
+  Price price{6.5};
+  return candle.contains(price) == false;
+}
+
+bool test_contains2()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 4.0 };
+  Price price{1.5};
+  return candle.contains(price) == false;
+}
+
+bool test_contains3()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 4.0 };
+  Price price{3.5};
+  return candle.contains(price) == true;
+}
+
+
+
+
 void initTests()
 {
   tests.push_back(test_body_contains1);
   tests.push_back(test_body_contains2);
   tests.push_back(test_body_contains3);
+  tests.push_back(test_contains1);
+  tests.push_back(test_contains2);
+  tests.push_back(test_contains3);
+
+
 
 }
 
