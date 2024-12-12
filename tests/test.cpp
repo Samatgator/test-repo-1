@@ -73,6 +73,24 @@ bool test_full_size3()
   return candle.full_size() == 0;
 }
 
+//tests 2.4
+bool test_body_size1()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 4.0 };
+  return candle.body_size() == 1.0;
+}
+
+bool test_body_size2()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 3.0 };
+  return candle.body_size() == 0.0;
+}
+
+bool test_body_size3()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 2.0 };
+  return candle.body_size() == 1.0;
+}
 
 void initTests()
 {
@@ -85,7 +103,9 @@ void initTests()
   tests.push_back(test_full_size1);
   tests.push_back(test_full_size2);
   tests.push_back(test_full_size3);
-
+  tests.push_back(test_body_size1);
+  tests.push_back(test_body_size2);
+  tests.push_back(test_body_size3);
 
 
 }
