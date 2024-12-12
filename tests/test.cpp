@@ -54,7 +54,24 @@ bool test_contains3()
   return candle.contains(price) == true;
 }
 
+//test 2.3
+bool test_full_size1()
+{
+  Candle candle{ 3.0, 5.0, 2.0, 4.0 };
+  return candle.full_size() == 3.0;
+}
 
+bool test_full_size2()
+{
+  Candle candle{ 1.0, 2.0, 0.0, 0.0 };
+  return candle.full_size() == 2.0;
+}
+
+bool test_full_size3()
+{
+  Candle candle{ 3.0, 3.0, 3.0, 3.0 };
+  return candle.full_size() == 0;
+}
 
 
 void initTests()
@@ -65,6 +82,9 @@ void initTests()
   tests.push_back(test_contains1);
   tests.push_back(test_contains2);
   tests.push_back(test_contains3);
+  tests.push_back(test_full_size1);
+  tests.push_back(test_full_size2);
+  tests.push_back(test_full_size3);
 
 
 
